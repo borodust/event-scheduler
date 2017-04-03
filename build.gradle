@@ -1,0 +1,18 @@
+apply plugin: 'java-library'
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.4.1'
+}
+
+test {
+    useTestNG()
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    testCompile 'org.testng:testng:6.10'
+}
+
